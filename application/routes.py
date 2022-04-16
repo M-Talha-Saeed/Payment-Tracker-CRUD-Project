@@ -43,3 +43,17 @@ def new_user():
 def user_payments(uid):
     all_payments = Payments.query.filter_by(user_id=uid).all()
     return render_template('user_payments.html', all_payments = all_payments)
+
+@app.route('/update_user/<int:uid>', methods = ['GET', 'POST'])
+def update_user(uid):
+    user = Users.query.get(uid)
+    form = UserForm()
+
+    if request.method == "POST":
+        user.user_name = form.user_name.data
+        db.session.commit()
+        return redirect(url_for('index'))
+
+    form.user_name.data = user.user_name
+
+    return render_template('new_user.html', form = form)
