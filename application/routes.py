@@ -21,7 +21,7 @@ def new_payment(uid):
         )
         db.session.add(payment)
         db.session.commit()
-        return redirect(url_for('index',uid=uid))
+        return redirect(url_for('user_payments',uid=uid))
 
     return render_template('new_payment.html', form = form)
 
@@ -38,3 +38,8 @@ def new_user():
         return redirect(url_for('index'))
 
     return render_template('new_user.html', form = form)
+
+@app.route('/user_payments/<int:uid>')
+def user_payments(uid):
+    all_payments = Payments.query.filter_by(user_id=uid).all()
+    return render_template('user_payments.html', all_payments = all_payments)
