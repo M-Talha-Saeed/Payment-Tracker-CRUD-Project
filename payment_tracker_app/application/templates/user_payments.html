@@ -8,6 +8,7 @@
     Item Price: {{ payments.item_price }}<br>
     Item purchased: {{ payments.item_purchased }}<br>
     <button><a href="{{ url_for('update_payment', pid=payments.id) }}">Update Payment</a></button><br>
+    <button><a href = "{{ url_for('delete_payment', pid=payments.id) }}">Delete Payment</a></button>
 </p>   
 {%endfor%}
 
