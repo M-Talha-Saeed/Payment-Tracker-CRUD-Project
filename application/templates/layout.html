@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<head>
+    <title>My Payment Tracker</title>
+</head>
+
+<body>
+    <navbar>
+        <button><a href = "{{url_for('index') }}"> Home </a></button><br>
+        <button><a href = "{{url_for('new_user') }}"> Add a User </a></button><br>
+    </navbar>
+    
+    <h1>My Payment Tracker</h1>
+
+    {% block body %}
+    {% endblock body %}
+</body>
