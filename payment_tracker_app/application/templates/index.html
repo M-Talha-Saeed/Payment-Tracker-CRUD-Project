@@ -8,6 +8,7 @@
     <button><a href = "{{url_for('new_payment', uid=users.id) }}"> Add a Payment </a></button>
     <button><a href = "{{url_for('user_payments', uid=users.id) }}"> View Existing Payments </a></button><br>
     <button><a href="{{ url_for('update_user', uid=users.id) }}">Update User</a></button><br>
+    <button><a href="{{ url_for('delete_user', uid=users.id) }}">Delete User </a></button>
 </p>
 {%endfor%}
 

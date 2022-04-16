@@ -75,3 +75,17 @@ def update_payment(pid):
     form.item_purchased.data = payment.item_purchased
 
     return render_template('new_payment.html', form = form)
+
+@app.route('/delete_user/<int:uid>')
+def delete_user(uid):
+    user = Users.query.get(uid)
+    db.session.delete(user)
+    db.session.commit()
+    return redirect(url_for('index'))
+
+@app.route('/delete_payment/<int:pid>')
+def delete_payment(pid):
+    payment = Payments.query.get(pid)
+    db.session.delete(payment)
+    db.session.commit()
+    return redirect(url_for('index'))
