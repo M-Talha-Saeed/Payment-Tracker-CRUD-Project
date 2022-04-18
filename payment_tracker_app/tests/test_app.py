@@ -3,7 +3,6 @@ from flask_testing import TestCase
 from application import app, db
 from flask import url_for, redirect
 from application.models import Users, Payments
-from datetime import datetime
 
 class TestBase(TestCase):
     def create_app(self):
@@ -116,10 +115,3 @@ class TestUpdate(TestBase):
             follow_redirects = True
         )
         self.assertNotIn(b'Game1', response.data)
-
-
-
-
-
-    
-    
