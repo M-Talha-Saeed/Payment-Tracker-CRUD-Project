@@ -16,6 +16,7 @@
     * [Unit Testing](#unit-testing)  
     * [Front-End Design](#front-end-design)  
 * [Future Improvements](#future-improvements)
+* [Video Recording](#video-recording)
 * [Authors](#authors)
 
 ## Introduction
@@ -193,7 +194,13 @@ Overall, I would class this project as a success. However this never rules out t
 
 * Another improvement I would like to implement in the future is to use CSS to improve the aesthetics of my app. At the moment, the app aesthetics are very basic with no colour or design. However improving the app design would cause the app to look and feel more professional and well done.
 
-### Authors
+## Video Recording
+
+Here is the link to the video presentation of my project:  
+
+https://drive.google.com/file/d/1QwpI1TXYpVx4t1yQrAbhAxTds_BkfgDD/view?usp=sharing
+
+## Authors
 
 Talha Saeed
 
